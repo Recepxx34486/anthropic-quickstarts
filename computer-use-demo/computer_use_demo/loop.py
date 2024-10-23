@@ -1,5 +1,5 @@
 """
-Agentic sampling loop that calls the Anthropic API and local implenmentation of anthropic-defined computer use tools.
+Agentic sampling loop that calls the Anthropic API and local implementation of anthropic-defined computer use tools.
 """
 
 import platform
@@ -88,7 +88,7 @@ async def sampling_loop(
 
     while True:
         enable_prompt_caching = False
-        betas = ["computer-use-2024-10-22"]
+        betas = [BETA_FLAG]
         image_truncation_threshold = 10
         if provider == APIProvider.ANTHROPIC:
             client = Anthropic(api_key=api_key)
